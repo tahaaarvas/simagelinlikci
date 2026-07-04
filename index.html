@@ -3,12 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Sima Gelinlik | Hayalindeki Gelinlik</title>
-    <!-- Google Fonts: zarif ve modern tipografi -->
+    <title>Sima Gelinlik & Kuaför | Hayalindeki Gelinlik ve Saç Tasarımı</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <!-- Font Awesome 6 ikonları -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         * {
@@ -25,7 +23,10 @@
             scroll-behavior: smooth;
         }
 
-        h1, h2, h3, .serif {
+        h1,
+        h2,
+        h3,
+        .serif {
             font-family: 'Playfair Display', serif;
             font-weight: 600;
         }
@@ -36,7 +37,6 @@
             padding: 0 20px;
         }
 
-        /* Navbar */
         .navbar {
             position: fixed;
             top: 0;
@@ -55,7 +55,7 @@
         .navbar.scrolled {
             background-color: rgba(255, 250, 251, 0.95);
             backdrop-filter: blur(10px);
-            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
             padding: 15px 40px;
             mix-blend-mode: normal;
         }
@@ -113,17 +113,21 @@
             cursor: pointer;
             color: white;
             transition: color 0.4s;
+            z-index: 1001;
+            width: 44px;
+            height: 44px;
+            align-items: center;
+            justify-content: center;
         }
 
         .navbar.scrolled .menu-toggle {
             color: #4a3b3c;
         }
 
-        /* Hero Section */
         .hero {
             height: 100vh;
             min-height: 650px;
-            background: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1607190074257-dd4b7af0309f?q=80&w=2070&auto=format&fit=crop') center/cover no-repeat;
+            background: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.3)), url('https://images.unsplash.com/photo-1607190074257-dd4b7af0309f?q=80&w=2070&auto=format&fit=crop') center/cover no-repeat;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -141,7 +145,7 @@
             font-size: 4rem;
             font-weight: 600;
             margin-bottom: 15px;
-            text-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
             letter-spacing: 2px;
         }
 
@@ -165,7 +169,7 @@
             text-decoration: none;
             transition: all 0.4s ease;
             backdrop-filter: blur(5px);
-            background-color: rgba(255,255,255,0.1);
+            background-color: rgba(255, 255, 255, 0.1);
         }
 
         .btn:hover {
@@ -185,7 +189,6 @@
             color: white;
         }
 
-        /* About Section */
         .about {
             padding: 100px 0;
             background-color: #fffafb;
@@ -213,6 +216,16 @@
             transform: translateX(-50%);
         }
 
+        /* Sadece Hizmetlerimiz başlığının ortalanması için özel düzeltme */
+        #services .section-title {
+            display: block;
+            text-align: center;
+            left: auto;
+            transform: none;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
         .about-content {
             display: flex;
             align-items: center;
@@ -235,7 +248,7 @@
             flex: 1 1 400px;
             border-radius: 8px;
             overflow: hidden;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
         }
 
         .about-image img {
@@ -249,10 +262,66 @@
             transform: scale(1.03);
         }
 
-        /* Galeri */
+        .services {
+            padding: 80px 0 60px;
+            background-color: #fdf7f8;
+            text-align: center;
+        }
+
+        .services-intro {
+            max-width: 700px;
+            margin: 0 auto 40px;
+            font-size: 1.1rem;
+            color: #5d4e4f;
+            line-height: 1.7;
+        }
+
+        .service-cards {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 8px;
+            padding: 35px 25px;
+            flex: 1 1 250px;
+            max-width: 350px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.04);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+        }
+
+        .service-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        .service-icon {
+            font-size: 2.5rem;
+            color: #d4af37;
+            margin-bottom: 20px;
+        }
+
+        .service-card h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            margin-bottom: 12px;
+            color: #3a2c2d;
+        }
+
+        .service-card p {
+            font-size: 0.95rem;
+            color: #5d4e4f;
+            line-height: 1.6;
+        }
+
         .gallery {
             padding: 80px 0 100px;
-            background-color: #fdf7f8;
+            background-color: #fffafb;
         }
 
         .gallery-grid {
@@ -267,14 +336,14 @@
             overflow: hidden;
             border-radius: 6px;
             cursor: pointer;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             aspect-ratio: 3/4;
         }
 
         .gallery-item:hover {
             transform: translateY(-8px);
-            box-shadow: 0 20px 35px rgba(0,0,0,0.1);
+            box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
         }
 
         .gallery-item img {
@@ -294,7 +363,7 @@
             bottom: 0;
             left: 0;
             right: 0;
-            background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
             color: white;
             padding: 25px 15px 15px;
             font-weight: 500;
@@ -308,7 +377,75 @@
             opacity: 1;
         }
 
-        /* Lightbox */
+        .gallery-note {
+            text-align: center;
+            margin-top: 30px;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1rem;
+            color: #8b7d7e;
+            letter-spacing: 0.5px;
+            position: relative;
+            padding-top: 20px;
+        }
+
+        .gallery-note::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 1px;
+            background: #d4af37;
+            opacity: 0.6;
+        }
+
+        .gallery-note i {
+            color: #d4af37;
+            margin: 0 6px;
+            font-size: 0.7rem;
+            vertical-align: middle;
+        }
+
+        .kuaför-highlight {
+            background: #fdf7f8;
+            border: 1px dashed #d4af37;
+            border-radius: 8px;
+            padding: 22px 30px;
+            margin-top: 35px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .kuaför-highlight i {
+            font-size: 2rem;
+            color: #d4af37;
+        }
+
+        .kuaför-highlight span {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            color: #3a2c2d;
+            letter-spacing: 0.5px;
+        }
+
+        .kuaför-highlight a {
+            color: #d4af37;
+            font-weight: 600;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.3s;
+        }
+
+        .kuaför-highlight a:hover {
+            border-bottom-color: #d4af37;
+        }
+
         .lightbox {
             display: none;
             position: fixed;
@@ -317,7 +454,7 @@
             top: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0,0,0,0.92);
+            background-color: rgba(0, 0, 0, 0.92);
             justify-content: center;
             align-items: center;
             flex-direction: column;
@@ -331,7 +468,7 @@
             max-width: 90%;
             max-height: 80vh;
             border-radius: 4px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
             object-fit: contain;
         }
 
@@ -349,10 +486,9 @@
             transform: rotate(90deg);
         }
 
-        /* Konum & İletişim */
         .location {
             padding: 100px 0;
-            background-color: #fffafb;
+            background-color: #fdf7f8;
         }
 
         .location-wrapper {
@@ -367,7 +503,7 @@
             min-height: 350px;
             border-radius: 8px;
             overflow: hidden;
-            box-shadow: 0 15px 30px rgba(0,0,0,0.07);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.07);
         }
 
         .map-container iframe {
@@ -382,10 +518,10 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            background: #fdf7f8;
+            background: #fffafb;
             padding: 35px;
             border-radius: 8px;
-            box-shadow: 0 15px 30px rgba(0,0,0,0.03);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.03);
         }
 
         .contact-details h3 {
@@ -429,7 +565,6 @@
             color: white;
         }
 
-        /* Footer */
         .footer {
             background: #f2e8e9;
             padding: 30px 0;
@@ -441,172 +576,244 @@
         .social-icons {
             margin-bottom: 15px;
         }
+
         .social-icons a {
             color: #4a3b3c;
             margin: 0 12px;
             font-size: 1.3rem;
             transition: color 0.3s;
         }
+
         .social-icons a:hover {
             color: #d4af37;
         }
 
-        /* Responsive */
         @media (max-width: 768px) {
             .navbar {
                 padding: 15px 20px;
             }
+
+            .menu-toggle {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
             .nav-links {
                 position: fixed;
                 top: 0;
                 right: -100%;
-                width: 70%;
+                width: 75%;
+                max-width: 320px;
                 height: 100vh;
                 background: rgba(255, 250, 251, 0.98);
-                backdrop-filter: blur(15px);
+                backdrop-filter: blur(20px);
+                -webkit-backdrop-filter: blur(20px);
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                transition: right 0.5s ease;
-                gap: 40px;
-                box-shadow: -5px 0 30px rgba(0,0,0,0.1);
+                transition: right 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+                gap: 35px;
+                box-shadow: -8px 0 40px rgba(0, 0, 0, 0.12);
+                border-left: 1px solid rgba(212, 175, 55, 0.15);
+                padding: 60px 30px;
             }
+
             .nav-links.active {
                 right: 0;
             }
+
             .nav-links a {
                 color: #4a3b3c !important;
-                font-size: 1.2rem;
+                font-size: 1.15rem;
+                letter-spacing: 2px;
+                font-weight: 500;
+                position: relative;
+                padding: 8px 0;
             }
-            .menu-toggle {
-                display: block;
-                z-index: 1001;
+
+            .nav-links a::after {
+                bottom: 0;
+                height: 1.5px;
+                background-color: #d4af37;
             }
+
             .hero h1 {
                 font-size: 2.8rem;
             }
+
             .gallery-grid {
                 grid-template-columns: repeat(2, 1fr);
                 gap: 15px;
             }
+
             .about-content {
                 flex-direction: column;
+            }
+
+            .navbar.scrolled .nav-links {
+                background: rgba(255, 250, 251, 0.98);
+            }
+
+            .service-cards {
+                flex-direction: column;
+                align-items: center;
             }
         }
 
         @media (max-width: 480px) {
             .gallery-grid {
                 grid-template-columns: 1fr 1fr;
+                gap: 12px;
             }
+
             .hero h1 {
                 font-size: 2.2rem;
             }
+
             .section-title {
                 font-size: 2.2rem;
+            }
+
+            .nav-links {
+                width: 85%;
+                max-width: 300px;
+                gap: 30px;
+            }
+
+            .nav-links a {
+                font-size: 1.1rem;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Navbar -->
     <nav class="navbar" id="navbar">
-        <a href="#" class="logo">Sima Gelinlik</a>
+        <a href="#" class="logo">Sima Gelinlik & Kuaför</a>
         <ul class="nav-links" id="navLinks">
             <li><a href="#home">Anasayfa</a></li>
             <li><a href="#about">Hakkımızda</a></li>
-            <li><a href="#gallery">Galeri</a></li>
+            <li><a href="#services">Hizmetler</a></li>
+            <li><a href="#gallery">Koleksiyon</a></li>
             <li><a href="#location">Konum</a></li>
         </ul>
         <div class="menu-toggle" id="menuToggle">
-            <i class="fas fa-bars"></i>
+            <i class="fas fa-ellipsis-v" id="menuIcon"></i>
         </div>
     </nav>
 
-    <!-- Hero -->
     <section class="hero" id="home">
         <div class="hero-content">
-            <h1>Rüyanızı Giydirin</h1>
-            <p>Zarafet, ihtişam ve zamansız tasarımlar bir arada.</p>
-            <a href="#gallery" class="btn">Koleksiyonu Keşfet</a>
+            <h1>Rüyanızı Giydirin,<br>Stilinizi Taçlandırın</h1>
+            <p>Zarafet, ihtişam ve kusursuz saç tasarımları bir arada.</p>
+            <a href="#services" class="btn">Hizmetlerimizi Keşfet</a>
         </div>
     </section>
 
-    <!-- Hakkımızda -->
     <section class="about" id="about">
         <div class="container">
-            <h2 class="section-title">Sima Gelinlik</h2>
+            <h2 class="section-title">Sima Gelinlik & Kuaför</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>2015 yılından bu yana gelin adaylarının hayallerini gerçeğe dönüştürüyoruz. Her detayın özenle düşünüldüğü, el işçiliği ve kaliteli kumaşlarla hazırlanan koleksiyonumuz, sizin özel gününüzü unutulmaz kılmak için tasarlandı.</p>
-                    <p>İster romantik bir dantel, ister modern minimal çizgiler… Sima Gelinlik’te tarzınıza uygun modeli bulacak, kendinizi bir masalın içinde hissedeceksiniz.</p>
+                    <p><strong>Gelinlik:</strong> 2015 yılından bu yana gelin adaylarının hayallerini gerçeğe dönüştürüyoruz. Her detayın özenle düşünüldüğü, el işçiliği ve kaliteli kumaşlarla hazırlanan koleksiyonumuz, sizin özel gününüzü unutulmaz kılmak için tasarlandı. İster romantik bir dantel, ister modern minimal çizgiler… Tarzınıza uygun modeli Sima Gelinlik'te bulacaksınız.</p>
+                    <p><strong>Kuaför:</strong> Özel gününüzde sadece gelinliğiniz değil, saçlarınız ve stiliniz de kusursuz olmalı. Uzman ekibimizle gelin saçı, özel gün topuzu, makyaj ve kişiye özel saç tasarımları sunuyoruz. Modern teknikler ve profesyonel ürünlerle, hayal ettiğiniz bütünsel görünüme kavuşmanız için yanınızdayız. Gelinlik provanızla birlikte saç ve makyaj denemesi de yapabilir, büyük güne eksiksiz hazırlanabilirsiniz.</p>
                     <a href="#location" class="btn-outline" style="margin-top:10px;">Bize Ulaşın</a>
                 </div>
                 <div class="about-image">
-                    <img src="foto1.jpg" alt="Sima Gelinlik atölye">
+                    <img src="foto1.jpg" alt="Sima Gelinlik & Kuaför atölye">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Galeri -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title">Hizmetlerimiz</h2>
+            <p class="services-intro">Sima çatısı altında, özel gününüz için ihtiyacınız olan her şeyi bir arada sunuyoruz. Gelinlikten saç tasarımına, makyajdan prova danışmanlığına kadar bütünsel bir deneyim sizi bekliyor.</p>
+            <div class="service-cards">
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-tshirt"></i></div>
+                    <h4>Gelinlik Koleksiyonu</h4>
+                    <p>El işçiliğiyle hazırlanmış, zamansız ve modern gelinlik modelleri. Dantel, ipek, saten ve daha fazlası.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-cut"></i></div>
+                    <h4>Saç & Makyaj</h4>
+                    <p>Gelin saçı, özel gün topuzu, dalgalı modeller ve profesyonel makyaj hizmetleri. Deneme seansları mevcut.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-star"></i></div>
+                    <h4>Bütünsel Stil Danışmanlığı</h4>
+                    <p>Gelinlik, saç ve makyajınızın uyum içinde olması için kişiye özel danışmanlık ve prova paketleri.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="gallery" id="gallery">
         <div class="container">
-            <h2 class="section-title">Koleksiyon</h2>
+            <h2 class="section-title">Gelinlik Koleksiyonumuz</h2>
             <div class="gallery-grid">
-                <div class="gallery-item">
+                <div class="gallery-item" onclick="openLightbox('foto2.jpg')">
                     <img src="foto2.jpg" alt="Gelinlik model 1">
                     <div class="overlay"></div>
                 </div>
-                <div class="gallery-item">
-                    <img src="foto3.jpg">
+                <div class="gallery-item" onclick="openLightbox('foto3.jpg')">
+                    <img src="foto3.jpg" alt="Gelinlik model 2">
                     <div class="overlay"></div>
                 </div>
-                <div class="gallery-item">
-                    <img src="foto4.jpg">
+                <div class="gallery-item" onclick="openLightbox('foto4.jpg')">
+                    <img src="foto4.jpg" alt="Gelinlik model 3">
                     <div class="overlay"></div>
                 </div>
-                <div class="gallery-item">
+                <div class="gallery-item" onclick="openLightbox('foto5.jpg')">
                     <img src="foto5.jpg" alt="Gelinlik model 4">
                     <div class="overlay"></div>
                 </div>
-                <div class="gallery-item">
+                <div class="gallery-item" onclick="openLightbox('foto6.jpg')">
                     <img src="foto6.jpg" alt="Gelinlik model 5">
                     <div class="overlay"></div>
                 </div>
-                <div class="gallery-item">
-                    <img src="foto7.jpg" alt="Gelinlik model 6">
+                <div class="gallery-item" onclick="openLightbox('foto7.jpg')">
+                    <img src="foto7.webp" alt="Gelinlik model 6">
                     <div class="overlay"></div>
                 </div>
+            </div>
+            <p class="gallery-note">
+                <i class="fas fa-camera-retro"></i> Çekimler <strong>Sima Ajans</strong> tarafından yapılmıştır <i class="fas fa-camera-retro"></i>
+            </p>
+            <div class="kuaför-highlight">
+                <i class="fas fa-cut"></i>
+                <span>Kuaför hizmetlerimiz ve saç & makyaj paketlerimiz hakkında bilgi almak için <a href="tel:+905071159112">bizi arayın</a> veya <a href="https://wa.me/905071159112" target="_blank">WhatsApp</a>'tan yazın.</span>
+                <i class="fas fa-wand-magic-sparkles"></i>
             </div>
         </div>
     </section>
 
-    <!-- Lightbox -->
     <div class="lightbox" id="lightbox">
         <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
         <img src="" alt="Gelinlik büyük görsel" id="lightboxImg">
     </div>
 
-    <!-- Konum & İletişim -->
     <section class="location" id="location">
         <div class="container">
             <h2 class="section-title">Konum & İletişim</h2>
             <div class="location-wrapper">
                 <div class="map-container">
-                    <!-- Örnek konum: İstanbul, Nişantaşı civarı. Gerçek adresinizi Google Maps'ten alıp iframe'i güncelleyin -->
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3841.726979418727!2d43.37974777643847!3d38.50689566965012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x401271e708a22c63%3A0xf55fb24cac7ba638!2zU8SwTUEgR0VMxLBOTMSwSw!5e1!3m2!1str!2str!4v1782766854433!5m2!1str!2str" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Sima Gelinlik Konum"></iframe>
+                    <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3841.726979418727!2d43.37974777643847!3d38.50689566965012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x401271e708a22c63%3A0xf55fb24cac7ba638!2zU8SwTUEgR0VMxLBOTMSwSw!5e1!3m2!1str!2str!4v1782766854433!5m2!1str!2str"
+                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                    title="Sima Gelinlik & Kuaför Konum"></iframe>
                 </div>
                 <div class="contact-details">
-                    <h3>Bize Ulaşın</h3>
+                    <h3>Sima Gelinlik & Kuaför</h3>
                     <div class="contact-item">
                         <i class="fas fa-map-marker-alt"></i>
                         <span>İsekele Caddesi Zerya Yapı Altı Sima Gelinlik Kuaför</span>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-phone-alt"></i>
-                        <span><a href="tel:+905071159112" style="color: inherit; text-decoration: none;">+90 507 115 9112
-                            </a>
-                        </span>
+                        <span><a href="tel:+905071159112" style="color: inherit; text-decoration: none;">+90 507 115 9112</a></span>
                     </div>
                     <div class="contact-item">
                         <i class="fab fa-whatsapp"></i>
@@ -616,75 +823,86 @@
                         <i class="fas fa-clock"></i>
                         <span>Pazartesi - Cumartesi: 10:00 - 19:00</span>
                     </div>
-                    <a href="https://maps.google.com/?q=41.0478,28.9904" target="_blank" class="btn-outline" style="margin-top:10px;">
-                        <i class="fas fa-directions"></i> Yol Tarifi Al
-                    </a>
-                </div>
+                    <p style="margin-top: 15px; font-size: 0.95rem; color: #5d4e4f;">
+                        <i class="fas fa-scissors" style="color: #d4af37; margin-right: 6px;"></i>
+                        Gelinlik provası, saç & makyaj denemesi için randevu almayı unutmayın.
+                    </p>
+                    <a href="https://maps.google.com/?q=41.0478,28.9904" target="_blank" class="btn-outline"
+                    style="margin-top:10px;">
+                    <i class="fas fa-directions"></i> Yol Tarifi Al
+                </a>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="social-icons">
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-pinterest-p"></i></a>
-                <a href="#"><i class="fab fa-whatsapp"></i></a>
-            </div>
-            <p>&copy; 2025 Sima Gelinlik. Tüm hakları saklıdır. | Zarafetle tasarlandı.</p>
+<footer class="footer">
+    <div class="container">
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-pinterest-p"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
         </div>
-    </footer>
+        <p>&copy; 2025 Sima Gelinlik & Kuaför. Tüm hakları saklıdır. | Zarafetle tasarlandı.</p>
+    </div>
+</footer>
 
-    <script>
-        // Navbar scroll efekti
-        const navbar = document.getElementById('navbar');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
-
-        // Mobil menü toggle
-        const menuToggle = document.getElementById('menuToggle');
-        const navLinks = document.getElementById('navLinks');
-        menuToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
-
-        // Menü linklerine tıklayınca mobil menüyü kapat
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-            });
-        });
-
-        // Lightbox fonksiyonları
-        function openLightbox(imgSrc) {
-            document.getElementById('lightboxImg').src = imgSrc;
-            document.getElementById('lightbox').classList.add('active');
+<script>
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
         }
+    });
 
-        function closeLightbox() {
-            document.getElementById('lightbox').classList.remove('active');
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    const menuIcon = document.getElementById('menuIcon');
+
+    menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        if (navLinks.classList.contains('active')) {
+            menuIcon.classList.remove('fa-ellipsis-v');
+            menuIcon.classList.add('fa-times');
+        } else {
+            menuIcon.classList.remove('fa-times');
+            menuIcon.classList.add('fa-ellipsis-v');
         }
+    });
 
-        // Lightbox dışında bir yere tıklayarak kapatma
-        document.getElementById('lightbox').addEventListener('click', function(e) {
-            if (e.target === this) {
-                closeLightbox();
-            }
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+            menuIcon.classList.remove('fa-times');
+            menuIcon.classList.add('fa-ellipsis-v');
         });
+    });
 
-        // ESC tuşu ile kapatma
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') {
-                closeLightbox();
-            }
-        });
-    </script>
+    function openLightbox(imgSrc) {
+        document.getElementById('lightboxImg').src = imgSrc;
+        document.getElementById('lightbox').classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+        document.getElementById('lightbox').classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    document.getElementById('lightbox').addEventListener('click', function(e) {
+        if (e.target === this) {
+            closeLightbox();
+        }
+    });
+
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            closeLightbox();
+        }
+    });
+</script>
 </body>
 </html>
